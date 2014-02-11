@@ -1,0 +1,147 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Ally \textsc{Weir}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & 62 Amochrie Rd, Paisley, PA2 0AH \\
+    \textsc{Phone:}     & +447964698129\\
+    \textsc{email:}     & \href{mailto:ally.pcgf+intern@gmail.com}{ally.pcgf@gmail.com} \\
+    \textsc{website}    & \href{http://www.allyjweir.co.uk}{allyjweir.co.uk} \\
+    \textsc{GitHub}     & \href{http://www.github.com/allyjweir}{github.com/allyjweir}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Manager \\\textsc{Apr 2013}&\emph{The Bield Climbing Wall}\\&\footnotesize{I am part of a Scout team that recently developed this small, independent climbing wall. It is quickly evolving into a local resource for numerous youth groups and schools. My current role is to develop new routes on the walls, run sessions and maintain equipment while managing bookings and the related admin work. My skills in communication and management are key when working with our distributed network of users and instructors.}\\\multicolumn{2}{c}{} \\
+ \emph{Oct 2012} & Specialist \\\textsc{Aug 2011}&\emph{Apple Store Braehead, Glasgow}\\&\footnotesize{I joined Apple for the opening of the Braehead, Glasgow store. Working as a Specialist I directly assisted customers with their purchases, using my extensive knowledge and enthusiasm for technology to find what they were looking for and troubleshoot issues with their devices. These skills made me a "go-to" for technical knowledge and advice amongst my co-workers. My passion for meaningful interactions with customers and attention to detail was enhanced, contributing to my store's position in the top 25 performing Apple stores worldwide for customer service.}\\\multicolumn{2}{c}{} \\
+\emph{Jul 2011} & IFS Co-worker \\\textsc{Oct 2010}&\emph{IKEA Glasgow}\\&\footnotesize{Working for the worlds largest producer of furniture gave me a keen insight to the workings of a multinational company and the organisation required to run such an undertaking. I worked in the Glasgow store’s restaurant. My responsibilities were to maintain a high hygiene standard while assisting customers in a helpful, friendly manner. This gave me a strong work ethic and instilled an ‘if you’re going to do something, do it right’ mentality.}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & 3rd year of Undergraduate Degree - BSc in Computer Science \\\textsc{Sept 2011}&\emph{University of Glasgow}\\&\footnotesize{\par Team Project: "Multi-device Recording System" | Advisor: Prof. John Williamson \par On track for 2:1} \par Studied English Literature for 2 years previously\\\multicolumn{2}{c}{} \\
+ \emph{2011} & Student \\\textsc{2005}&\emph{Gleniffer High School}\\&\footnotesize{Advanced Higher at A 
+            \begin{itemize}
+                \item English (Band 1)
+            \end{itemize}
+    \par Highers at A 
+            \begin{itemize}
+                \item English, Maths, Computing, Physics (All Band 1)
+            \end{itemize}
+    \par Highers at B
+            \begin{itemize}
+                \item Chemistry
+            \end{itemize}}\\
+    \multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+\emph {2013-14} & Multi-device Recording System \\&\emph{Team Leader}\\&\footnotesize{This year-long project is to design and construct a new way to explore the soundscapes of a city. Using an Android device to capture audio and information from numerous sensors we combine this information into an exciting web application allowing the user to explore a space. I am heavily involved in the Android application's development as its sole developer and take an active role in building the accompanying Django web application.}\\\multicolumn{2}{c}{} \\
+\emph {2014} & Collaborative Requirements Tracker \\&\emph{System Architect, Developer}\\&\footnotesize{3 month long distributed information systems project focusing on the Django web application framework to create a collaborative workspace for asyncronous development teams. By leveraging a wide variety of web technologies, our aim is to create an intuitive application. My focus is on the UX/UI of the application along with contributing to the codebase as a whole.}\\\multicolumn{2}{c}{} \\
+\emph {2013} & WHO/Olympic Data Visualisation \\&\emph{Developer}\\&\footnotesize{This short project focused on, using data from the World Health Organisation and the 2012 Olympic Games, to find meaningful connections in the datasets. We extensively leveraged the d3 data visualisation JavaScript library along with other key web technologies to create an imaginative range of visualisations in a functional web application. }\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section:Voluntary
+\section{Voluntary Work}
+\begin{tabular}{r|p{11cm}}
+\emph{Current} & Scout Leader \\\textsc{Jan 2010}&\emph{2nd Paisley Abbey Scouts}\\&\footnotesize{I have worked consistently as part of the Scout section's leadership team to offer a varied weekly programme at halls and camps throughout the year. While improving my communication skills and teamworking with other leaders, I have also furthered my leadership abilities running activities for the Scouts themselves.\par I have organised trips to National Activity Centres and taught numerous outdoor skills such as bushcraft and backwoods cooking. These have improved my organisational skills while allowing me to foster each Scout's own skills in outdoorsmapship and teamwork.}\\\multicolumn{2}{c}{} \\
+\emph{Current} & Quartermaster \\\textsc{Jan 2010}&\emph{2nd Paisley Abbey Scouts}\\&\footnotesize{My responsibilities in this role involve organising and cataloging all the equipment used by my Scout group. In this role I make use of keen insight into the organisation and ongoing communication with different sections to facilitate their programmes, giving them the equipment they need. I also carry out maintainance and purchase new equipment based on feedback and keeping track of what is needed.\\\multicolumn{2}{c}{} \\
+\emph{Jan 2009} & Volunteer, \\\textsc{Dec 2009}&\emph{Erskine Hospital}\\&\footnotesize{While volunteering at Erskine Hospital I took part in numerous roles to improve the quality of life for the ex-servicemen and women in residence. These included groundskeeping, entertainment, fundraising and administration work. These helped improve my teamwork particularly working with those from completely different walks of life.}
+\end{tabular}
+
+%Section: Technical Skills
+\section{Technical Skills}
+Please see my \hyperlink{https://github.com/allyjweir}{GitHub} profile for examples of my work.\\
+\begin{tabular}{r|p{11cm}}
+Basic & MySQL, Bootstrap, d3, JavaScript, JQuery \\
+Intermediate & Linux, Android Development, HTML, CSS, Django, Python, PureCSS, Git   \\
+Advanced & Android, Java, Windows
+\end{tabular}
+
+%Section: Interests
+\section{Interests and Activities}
+\begin{tabular}{r|p{11cm}}
+Technology & Mobile Devices, Combining Big Data, UI/UX\\
+Sports & Skiing, Rock Climbing, Hillwalking\\
+Miscellaneous & Scouting, Travelling, English Literature
+\end{tabular}
+
+\end{document}
